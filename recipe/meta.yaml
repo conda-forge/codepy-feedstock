@@ -1,5 +1,5 @@
 {% set name = "codepy" %}
-{% set version = "2019.1" %}
+{% set version = "2023.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codepy-{{ version }}.tar.gz
-  sha256: 384f22c37fe987c0ca71951690c3c2fd14dacdeddbeb0fde4fd01cd84859c94e
+  sha256: bce2e136e9fb3cf59949427d4ef419648778401e6db288596e75b53e144f8b93
 
 build:
   number: 0
@@ -30,7 +30,6 @@ requirements:
 test:
   imports:
     - codepy
-    - codepy.cgen
   commands:
     - pip check
   requires:
@@ -41,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Generate and execute native code at run time, from Python'
+  summary: Generate and execute native code at run time, from Python
   description: |
     CodePy is a C/C++ metaprogramming toolkit for Python. It helps you
     compile source code and dynamically load it into the Python
