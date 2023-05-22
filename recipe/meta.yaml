@@ -30,7 +30,6 @@ requirements:
 test:
   imports:
     - codepy
-    - codepy.cgen
   commands:
     - pip check
   requires:
