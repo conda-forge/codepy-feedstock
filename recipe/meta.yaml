@@ -7,23 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/codepy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/codepy-{{ version }}.tar.gz
   sha256: bce2e136e9fb3cf59949427d4ef419648778401e6db288596e75b53e144f8b93
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
     - appdirs >=1.4.0
     - cgen
     - numpy >=1.6
-    - python >=3.6
+    - python >={{ python_min }}
     - pytools >=2015.1.2
     - six
 
@@ -34,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://mathema.tician.de/software/codepy
