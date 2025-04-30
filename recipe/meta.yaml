@@ -1,5 +1,5 @@
 {% set name = "codepy" %}
-{% set version = "2023.1" %}
+{% set version = "2025.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/codepy-{{ version }}.tar.gz
-  sha256: bce2e136e9fb3cf59949427d4ef419648778401e6db288596e75b53e144f8b93
+  sha256: ccc8365955050e827368ec0034c74cc3523a5cc60d8aff46a1a5345b769a9b75
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
