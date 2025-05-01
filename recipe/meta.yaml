@@ -1,6 +1,6 @@
 {% set name = "codepy" %}
 {% set version = "2025.1" %}
-
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -19,14 +19,13 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
+    - hatchling
   run:
-    - appdirs >=1.4.0
-    - cgen
+    - platformdirs >=2.2.0
     - numpy >=1.6
     - python >={{ python_min }}
-    - pytools >=2015.1.2
-    - six
+    - pytools >=2022.1.14
+    - typing_extensions >=4.5
 
 test:
   imports:
