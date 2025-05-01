@@ -21,6 +21,7 @@ requirements:
     - python {{ python_min }}
     - hatchling
   run:
+    - cgen
     - platformdirs >=2.2.0
     - numpy >=1.6
     - python >={{ python_min }}
